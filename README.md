@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 You can find examples of all modules included when you open the src/index.html file in your browser. Once you checked out the repository be sure to install all node modules needed by running in the project directory:
 
-``bash
+``
 npm install
 ``
 

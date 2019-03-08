@@ -1,0 +1,39 @@
+<table class="calulator-table">
+  <tr>
+    <td colspan="3">
+      <input [(ngModel)]="currentValue" name="currentValue" type="number" class="value-input">
+    </td>
+    <td></td>
+    <td>
+      <button (click)="calculate()" [disabled]="calculator.operation == null" class="wide-button">=</button>
+    </td>
+  </tr>
+  <tr>
+    <td><button (click)="setValue(1)" class="wide-button">1</button></td>
+    <td><button (click)="setValue(2)" class="wide-button">2</button></td>
+    <td><button (click)="setValue(3)" class="wide-button">3</button></td>
+    <td></td>
+    <td><button (click)="operate(operations.add)" [disabled]="calculator.operation != null" class="wide-button">+</button></td>
+  </tr>
+  <tr>
+    <td><button (click)="setValue(4)" class="wide-button">4</button></td>
+    <td><button (click)="setValue(5)" class="wide-button">5</button></td>
+    <td><button (click)="setValue(6)" class="wide-button">6</button></td>
+    <td></td>
+    <td><button (click)="operate(operations.subtract)" [disabled]="calculator.operation != null" class="wide-button">-</button></td>
+  </tr>
+  <tr>
+    <td><button (click)="setValue(7)" class="wide-button">7</button></td>
+    <td><button (click)="setValue(8)" class="wide-button">8</button></td>
+    <td><button (click)="setValue(9)" class="wide-button">9</button></td>
+    <td></td>
+    <td><button (click)="operate(operations.multiply)" [disabled]="calculator.operation != null" class="wide-button">*</button></td>
+  </tr>
+  <tr>
+    <td><button (click)="reset()" class="wide-button">C</button></td>
+    <td><button (click)="setValue(0)" [disabled]="calculator.operation == operations.divide" class="wide-button">0</button></td>
+    <td></td>
+    <td></td>
+    <td><button (click)="operate(operations.divide)" [disabled]="calculator.operation != null || calculator.operation == operations.divide" class="wide-button">/</button></td>
+  </tr>
+</table>

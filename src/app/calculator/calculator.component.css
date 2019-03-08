@@ -1,0 +1,11 @@
+.wide-button {
+  width: 40px;
+}
+
+.calulator-table, .value-input {
+  width: 130px;
+}
+
+.value-input {
+  text-align: right;
+}

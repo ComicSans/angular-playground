@@ -8,10 +8,26 @@ You can find examples of all modules included when you open the src/index.html f
 npm install
 ``
 
+Run 
+``
+ng serve --open
+``
+to display the manual and examples of the included components.
+
 ## Content
 
 _Please note: this is work in progress._
 
 ### Tabs
 
-A module to display tabs.
+A component to display tabs within your application. The component also supports child tabs.
+
+### Calculator component
+
+A small calculator.
+
+### Datastore
+
+A sample datastore including a service implementation and a demo component to display the results.
+Included is a generic store implementation. The REST backend is mocked with an HTTP interceptor and
+an in memory database.

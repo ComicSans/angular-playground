@@ -38,5 +38,15 @@
 
 <h1>Tasklist Store</h1>
 <p>
+  The Tasklist Store implements the Datastore Pattern by separating backend logic and view state. The component binds
+  to a service variable and display the current state of that variable. That service variable is managed by a datastore
+  and never changed directly. The datastore accepts several actions (like 'LOAD' or 'DELETE') and applies those actions
+  to the view state. A in memory mock implementation is used here to mimic a rest backend. Currently only the SELECT and
+  DELETE actions are implemented in the view.
+</p>
+<p>
+  A generic store version is provided, too.
+</p>
+<p>
   <app-task-list></app-task-list>
 </p>

@@ -10,7 +10,8 @@ import { CalculatorDemoComponent } from './calculator-demo/calculator-demo.compo
 import { TaskListComponent } from './task-list/task-list.component';
 
 import {HttpClientModule} from '@angular/common/http';
-
+import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
+import {TaskService} from './stores/task.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     TabsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(TaskService),
   ],
   providers: [],
   bootstrap: [AppComponent]

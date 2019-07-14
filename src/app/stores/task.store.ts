@@ -14,15 +14,6 @@ export class TaskStore {
   private tasks: Task[] = [];
   items$ = new BehaviorSubject<Task[]>([]);
 
-  constructor() {
-    const task: Task = {
-      id: 1,
-      title: 'Dummy Task 1'
-    };
-    const action = {type : ADD, data: task};
-    this.dispatch(action);
-  }
-
   dispatch(action) {
     this.tasks = this._reduce(this.tasks, action);
     this.items$.next(this.tasks);

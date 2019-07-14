@@ -5,7 +5,6 @@ export const ADD = 'ADD';
 export const EDIT = 'EDIT';
 export const REMOVE = 'REMOVE';
 
-
 type Id = string | number;
 interface Identifiable {
   id?: Id;
@@ -27,15 +26,15 @@ export class Store<T extends Identifiable> {
       case ADD:
         return [...items, action.data];
       case EDIT:
-        return items.map(task => {
+        return items.map(item => {
           const editedItem = action.data;
-          if (task.id !== editedItem.id) {
-            return task;
+          if (item.id !== editedItem.id) {
+            return item;
           }
           return editedItem;
         });
       case REMOVE:
-        return items.filter(task => task.id !== action.data.id);
+        return items.filter(item => item.id !== action.data.id);
       default:
         return items;
     }

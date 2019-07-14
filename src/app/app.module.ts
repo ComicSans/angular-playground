@@ -7,18 +7,24 @@ import { TabsModule } from './tabs/tabs.module';
 import { TabsDemoComponent } from './tabs-demo/tabs-demo.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CalculatorDemoComponent } from './calculator-demo/calculator-demo.component';
+import { TaskListComponent } from './task-list/task-list.component';
+
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TabsDemoComponent,
     CalculatorComponent,
-    CalculatorDemoComponent
+    CalculatorDemoComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule,
     TabsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

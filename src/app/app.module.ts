@@ -11,7 +11,7 @@ import { TaskListComponent } from './task-list/task-list.component';
 
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
-import {TaskService} from './stores/task.service';
+import {InMemoryTaskService} from './stores/in-memory-db';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import {TaskService} from './stores/task.service';
     TabsModule,
     FormsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(TaskService),
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryTaskService),
   ],
   providers: [],
   bootstrap: [AppComponent]

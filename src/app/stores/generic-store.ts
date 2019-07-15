@@ -10,6 +10,9 @@ interface Identifiable {
   id?: Id;
 }
 
+@Injectable({
+  providedIn: 'root'
+})
 export class Store<T extends Identifiable> {
   items = [];
   items$ = new BehaviorSubject<T[]>([]);
